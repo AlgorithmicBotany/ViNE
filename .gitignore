@@ -29,3 +29,6 @@
 *.out
 *.app
 test.txt
+IsoPoly/.vs
+IsoPoly/openvdb
+IsoPoly/x64
