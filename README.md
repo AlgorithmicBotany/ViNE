@@ -1,6 +1,6 @@
-## ViNE
+# ViNE
  
-# How to run
+## How to run
 
 Clone this repository or download a release version and extract the ZIP archive.
 
@@ -24,12 +24,11 @@ Ensure the headset and controllers are not in standby mode.
 * If the model and segmentation do not load, ensure the files are placed in the correct folders.
 Alternatively, check the first line of the CLR file to ensure it specifies the location of the 3D mesh file (e.g., the PLY file).
 
-## IsoPoly
-
-Included with ViNE is a program to create polygon meshes from 3D image stacks. Please see the README.md file in the `IsoPoly` folder for instructions.
-
-# How to compile
+## How to compile
 
 The source code for ViNE is not yet available. It will be posted here as soon as possible.
 
+# IsoPoly
+
+Included with ViNE is a program to create polygon meshes from 3D image stacks. Please see the README.md file in the `IsoPoly` folder for instructions.
 
