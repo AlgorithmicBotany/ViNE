@@ -32,3 +32,15 @@ The source code for ViNE is not yet available. It will be posted here as soon as
 
 Included with ViNE is a program to create polygon meshes from 3D image stacks. Please see the README.md file in the `IsoPoly` folder for instructions.
 
+# Citation
+
+ViNE and IsoPoly were developed by Jeremy Adam Hart as part of his M.Sc. thesis at the University of Calgary: http://algorithmicbotany.org/papers/hart.th2020.html
+
+Please use the following citation:
+```
+@mastersthesis{Hart2020ivm,
+	Author = {Jeremy Adam Hart},
+	School = {University of Calgary},
+	Title = {Interactive Visualization and Modeling of Plant Structures in Virtual Reality},
+	Year = {2022}}
+```
