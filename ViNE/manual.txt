@@ -1,0 +1,17 @@
+MOVING AND ROTATING MODEL
+	- Holding down the grip button on a single controller will allow you to translate the model as if you were holding it. 
+	- Holding down the grip button on both controllers allows you to rotate the model as if your controllers were grabbing the model
+
+PAINTING
+	- The trigger will cause a sphere to appear around the controller which will paint everything inside of it
+	- Partially pressing the trigger will display the sphere without painting
+Sphere Size:
+	- The painting sphere size can be changed using the right hand controller by:
+	HTC Vive - Making circles on the trackpad clockwise increases the size, counterclockwise decreases
+	Oculus Rift - Moving the joystick up increases the size, down decreases
+Painting Color:
+	- The painting color can be selected using the left controller's joystick/trackpad
+
+UNDO/REDO
+	HTC Vive - Undo by pressing the menu button on the right controller, redo by pressing menu button on the left
+	Oculus Rift - Undo by pressing the 'A' button, redo by pressing the 'X' button
