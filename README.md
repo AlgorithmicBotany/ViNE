@@ -24,9 +24,18 @@ Ensure the headset and controllers are not in standby mode.
 * If the model and segmentation do not load, ensure the files are placed in the correct folders.
 Alternatively, check the first line of the CLR file to ensure it specifies the location of the 3D mesh file (e.g., the PLY file).
 
-## How to compile
+## How to compile on Windows using Microsoft Visual Studio
 
-The source code for ViNE is not yet available. It will be posted here as soon as possible.
+1. Install the OpenVR SDK: https://github.com/ValveSoftware/openvr
+	* The openvr_api.lib/.dll files are included with the source code but if you want a newer version, the simplest way is to install openvr via vcpkg: `vcpkg.exe install openvr:x64-windows`. See https://vcpkg.io/en/getting-started.html for more information on vcpkg.
+
+2. Build the included Rendering Engine Library
+	* Open `./ViNE/RenderingEngineLibrary/RenderingEngine.sln`, select Release x64, then Build Solution.
+	* Note: the OpenVR and FreeType library files are included in the `lib` folder of the Rendering Engine Library.
+
+3. Build ViNE
+	* Open `./ViNE/ViNE/ViNE.sln`, select Release x64, then Build Solution.
+	* Note
 
 # IsoPoly
 

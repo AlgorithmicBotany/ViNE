@@ -23,12 +23,33 @@
 *.lai
 *.la
 *.a
-*.lib
+# *.lib
 
 # Executables
 *.out
 *.app
 test.txt
+
+# MS Visual Studio files
+*.vcxproj.user
+
 IsoPoly/.vs
 IsoPoly/openvdb
 IsoPoly/x64
+
+RenderingEngineLibrary/.vs
+RenderingEngineLibrary/GLFW/obj
+RenderingEngineLibrary/GLFW/lib/Release
+RenderingEngineLibrary/JORL_Core/x64
+RenderingEngineLibrary/JORL_Examples/x64
+RenderingEngineLibrary/JORL_Extensions/x64
+RenderingEngineLibrary/JORL_Text/x64
+RenderingEngineLibrary/JORL_VR/x64
+RenderingEngineLibrary/JORL_VR_Examples/x64
+RenderingEngineLibrary/x64
+
+ViNE/.vs
+ViNE/x64
+ViNE/ViNE/x64
+ViNE/BUILD_PACKAGE/x64
+ViNE/BUILD_PACKAGE/BUILD_PACKAGE.log

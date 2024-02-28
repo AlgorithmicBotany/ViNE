@@ -1,4 +1,4 @@
-// OpenVRTest.cpp : Defines the entry point for the console application.
+// ViNE.cpp : Defines the entry point for the console application.
 //
 
 #include "VRWindow.h"

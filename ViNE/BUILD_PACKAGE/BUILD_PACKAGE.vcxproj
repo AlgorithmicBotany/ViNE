@@ -21,32 +21,32 @@
   <PropertyGroup Label="Globals">
     <ProjectGuid>{2AF605CB-83F2-4DDC-8693-56F4F05BA640}</ProjectGuid>
     <RootNamespace>BUILD_PACKAGE</RootNamespace>
-    <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v141</PlatformToolset>
+    <PlatformToolset>v142</PlatformToolset>
     <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
-    <PlatformToolset>v141</PlatformToolset>
+    <PlatformToolset>v142</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v141</PlatformToolset>
+    <PlatformToolset>v142</PlatformToolset>
     <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
-    <PlatformToolset>v141</PlatformToolset>
+    <PlatformToolset>v142</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
@@ -83,11 +83,11 @@ IF EXIST "%BuildDir%models" rd /s /q "%BuildDir%models/"
 IF EXIST "%BuildDir%" del /q "%BuildDir%*"
 IF NOT EXIST "%BuildDir%" mkdir "%BuildDir%"
 IF NOT EXIST "%BuildDir%saved" mkdir "%BuildDir%saved\"
-xcopy /s "$(SolutionDir)OpenVRTest\shaders" "%BuildDir%shaders\"
-xcopy /s "$(SolutionDir)OpenVRTest\models" "%BuildDir%models\"
-xcopy /s "$(SolutionDir)OpenVRTest\untrackedmodels" "%BuildDir%untrackedmodels\"
-xcopy "$(SolutionDir)OpenVRTest\openvr_api.dll" "%BuildDir%"
-xcopy "$(SolutionDir)OpenVRTest\default.cmp" "%BuildDir%"
+xcopy /s "$(SolutionDir)ViNE\shaders" "%BuildDir%shaders\"
+xcopy /s "$(SolutionDir)ViNE\models" "%BuildDir%models\"
+xcopy /s "$(SolutionDir)ViNE\untrackedmodels" "%BuildDir%untrackedmodels\"
+xcopy "$(SolutionDir)ViNE\OPENVR_DLL_FIX\openvr_api.dll" "%BuildDir%"
+xcopy "$(SolutionDir)ViNE\default.cmp" "%BuildDir%"
 xcopy "$(SolutionDir)$(Platform)\$(Configuration)\*.exe" "%BuildDir%"
 </Command>
     </PostBuildEvent>
@@ -95,7 +95,7 @@ xcopy "$(SolutionDir)$(Platform)\$(Configuration)\*.exe" "%BuildDir%"
       <Path>$(ProjectDir)$(MSBuildProjectName).log</Path>
     </BuildLog>
     <CustomBuildStep>
-      <Inputs>$(SolutionDir)$(PlatformShortName)\$(Configuration)\OpenVRTest.exe;%(Inputs)</Inputs>
+      <Inputs>$(SolutionDir)$(PlatformShortName)\$(Configuration)\ViNE.exe;%(Inputs)</Inputs>
     </CustomBuildStep>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -112,11 +112,11 @@ IF EXIST "%BuildDir%models" rd /s /q "%BuildDir%models/"
 IF EXIST "%BuildDir%" del /q "%BuildDir%*"
 IF NOT EXIST "%BuildDir%" mkdir "%BuildDir%"
 IF NOT EXIST "%BuildDir%saved" mkdir "%BuildDir%saved\"
-xcopy /s "$(SolutionDir)OpenVRTest\shaders" "%BuildDir%shaders\"
-xcopy /s "$(SolutionDir)OpenVRTest\models" "%BuildDir%models\"
-xcopy /s "$(SolutionDir)OpenVRTest\untrackedmodels" "%BuildDir%untrackedmodels\"
-xcopy "$(SolutionDir)OpenVRTest\openvr_api.dll" "%BuildDir%"
-xcopy "$(SolutionDir)OpenVRTest\default.cmp" "%BuildDir%"
+xcopy /s "$(SolutionDir)ViNE\shaders" "%BuildDir%shaders\"
+xcopy /s "$(SolutionDir)ViNE\models" "%BuildDir%models\"
+xcopy /s "$(SolutionDir)ViNE\untrackedmodels" "%BuildDir%untrackedmodels\"
+xcopy "$(SolutionDir)\OPENVR_DLL_FIX\ViNE\openvr_api.dll" "%BuildDir%"
+xcopy "$(SolutionDir)ViNE\default.cmp" "%BuildDir%"
 xcopy "$(SolutionDir)$(Platform)\$(Configuration)\*.exe" "%BuildDir%"
 </Command>
     </PostBuildEvent>
@@ -124,7 +124,7 @@ xcopy "$(SolutionDir)$(Platform)\$(Configuration)\*.exe" "%BuildDir%"
       <Path>$(ProjectDir)$(MSBuildProjectName).log</Path>
     </BuildLog>
     <CustomBuildStep>
-      <Inputs>$(SolutionDir)$(PlatformShortName)\$(Configuration)\OpenVRTest.exe;%(Inputs)</Inputs>
+      <Inputs>$(SolutionDir)$(PlatformShortName)\$(Configuration)\ViNE.exe;%(Inputs)</Inputs>
     </CustomBuildStep>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -147,11 +147,11 @@ IF EXIST "%BuildDir%models" rd /s /q "%BuildDir%models/"
 IF EXIST "%BuildDir%" del /q "%BuildDir%*"
 IF NOT EXIST "%BuildDir%" mkdir "%BuildDir%"
 IF NOT EXIST "%BuildDir%saved" mkdir "%BuildDir%saved\"
-xcopy /s "$(SolutionDir)OpenVRTest\shaders" "%BuildDir%shaders\"
-xcopy /s "$(SolutionDir)OpenVRTest\models" "%BuildDir%models\"
-xcopy /s "$(SolutionDir)OpenVRTest\untrackedmodels" "%BuildDir%untrackedmodels\"
-xcopy "$(SolutionDir)OpenVRTest\openvr_api.dll" "%BuildDir%"
-xcopy "$(SolutionDir)OpenVRTest\default.cmp" "%BuildDir%"
+xcopy /s "$(SolutionDir)ViNE\shaders" "%BuildDir%shaders\"
+xcopy /s "$(SolutionDir)ViNE\models" "%BuildDir%models\"
+xcopy /s "$(SolutionDir)ViNE\untrackedmodels" "%BuildDir%untrackedmodels\"
+xcopy "$(SolutionDir)ViNE\OPENVR_DLL_FIX\openvr_api.dll" "%BuildDir%"
+xcopy "$(SolutionDir)ViNE\default.cmp" "%BuildDir%"
 xcopy "$(SolutionDir)$(Platform)\$(Configuration)\*.exe" "%BuildDir%"
 </Command>
     </PostBuildEvent>
@@ -159,7 +159,7 @@ xcopy "$(SolutionDir)$(Platform)\$(Configuration)\*.exe" "%BuildDir%"
       <Path>$(ProjectDir)$(MSBuildProjectName).log</Path>
     </BuildLog>
     <CustomBuildStep>
-      <Inputs>$(SolutionDir)$(PlatformShortName)\$(Configuration)\OpenVRTest.exe;%(Inputs)</Inputs>
+      <Inputs>$(SolutionDir)$(PlatformShortName)\$(Configuration)\ViNE.exe;%(Inputs)</Inputs>
     </CustomBuildStep>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -182,11 +182,11 @@ IF EXIST "%BuildDir%models" rd /s /q "%BuildDir%models/"
 IF EXIST "%BuildDir%" del /q "%BuildDir%*"
 IF NOT EXIST "%BuildDir%" mkdir "%BuildDir%"
 IF NOT EXIST "%BuildDir%saved" mkdir "%BuildDir%saved\"
-xcopy /s "$(SolutionDir)OpenVRTest\shaders" "%BuildDir%shaders\"
-xcopy /s "$(SolutionDir)OpenVRTest\models" "%BuildDir%models\"
-xcopy /s "$(SolutionDir)OpenVRTest\untrackedmodels" "%BuildDir%untrackedmodels\"
-xcopy "$(SolutionDir)OpenVRTest\openvr_api.dll" "%BuildDir%"
-xcopy "$(SolutionDir)OpenVRTest\default.cmp" "%BuildDir%"
+xcopy /s "$(SolutionDir)ViNE\shaders" "%BuildDir%shaders\"
+xcopy /s "$(SolutionDir)ViNE\models" "%BuildDir%models\"
+xcopy /s "$(SolutionDir)ViNE\untrackedmodels" "%BuildDir%untrackedmodels\"
+xcopy "$(SolutionDir)ViNE\OPENVR_DLL_FIX\openvr_api.dll" "%BuildDir%"
+xcopy "$(SolutionDir)ViNE\default.cmp" "%BuildDir%"
 xcopy "$(SolutionDir)$(Platform)\$(Configuration)\*.exe" "%BuildDir%"
 </Command>
     </PostBuildEvent>
@@ -194,7 +194,7 @@ xcopy "$(SolutionDir)$(Platform)\$(Configuration)\*.exe" "%BuildDir%"
       <Path>$(ProjectDir)$(MSBuildProjectName).log</Path>
     </BuildLog>
     <CustomBuildStep>
-      <Inputs>$(SolutionDir)$(PlatformShortName)\$(Configuration)\OpenVRTest.exe;%(Inputs)</Inputs>
+      <Inputs>$(SolutionDir)$(PlatformShortName)\$(Configuration)\ViNE.exe;%(Inputs)</Inputs>
     </CustomBuildStep>
   </ItemDefinitionGroup>
   <ItemGroup>

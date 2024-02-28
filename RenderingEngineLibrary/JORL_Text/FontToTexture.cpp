@@ -58,8 +58,8 @@ Font createFont(FT_Library* ft, const char* fontFilename, TextureManager* texMan
 		c.bitmap.width = glyph->bitmap.width;
 		c.bitmap.height = glyph->bitmap.rows;
 
-		maxBitmapWidth = max(maxBitmapWidth, c.bitmap.width);
-		maxBitmapHeight = max(maxBitmapHeight, c.bitmap.height);
+		maxBitmapWidth = std::max(maxBitmapWidth, c.bitmap.width);
+		maxBitmapHeight = std::max(maxBitmapHeight, c.bitmap.height);
 		
 		//printf("Pixel mode = %d, rows = %d, columns = %d, row offset = %d\n", glyph->bitmap.pixel_mode, glyph->bitmap.rows, glyph->bitmap.width, glyph->bitmap.pitch);
 
