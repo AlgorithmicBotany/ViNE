@@ -2,7 +2,7 @@
  
 ## How to run
 
-Clone this repository or download a release version and extract the ZIP archive.
+Clone this repository and compile ViNE, or download a release version and extract the ZIP archive.
 
 Run a test with a simple unsegmented icosahedron mesh: `./ViNE.exe untrackedmodels/icosahedron.ply`
 
