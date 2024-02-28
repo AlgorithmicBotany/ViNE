@@ -178,16 +178,17 @@ xcopy "$(SolutionDir)$(Platform)\$(Configuration)\*.exe" "%BuildDir%"
       <Command>SET BuildDir=$(SolutionDir)BUILD_PACKAGE\$(Platform)\$(Configuration)\
 IF EXIST "%BuildDir%shaders" rd /s /q "%BuildDir%shaders/"
 IF EXIST "%BuildDir%models" rd /s /q "%BuildDir%models/"
-:: IF EXIST "%BuildDir%untrackedmodels" rd /s /q "%BuildDir%untrackedmodels/"
+IF EXIST "%BuildDir%untrackedmodels" rd /s /q "%BuildDir%untrackedmodels/"
 IF EXIST "%BuildDir%" del /q "%BuildDir%*"
 IF NOT EXIST "%BuildDir%" mkdir "%BuildDir%"
 IF NOT EXIST "%BuildDir%saved" mkdir "%BuildDir%saved\"
 xcopy /s "$(SolutionDir)ViNE\shaders" "%BuildDir%shaders\"
 xcopy /s "$(SolutionDir)ViNE\models" "%BuildDir%models\"
 xcopy /s "$(SolutionDir)ViNE\untrackedmodels" "%BuildDir%untrackedmodels\"
-xcopy "$(SolutionDir)ViNE\OPENVR_DLL_FIX\openvr_api.dll" "%BuildDir%"
 xcopy "$(SolutionDir)ViNE\default.cmp" "%BuildDir%"
+xcopy "$(SolutionDir)ViNE\*.json" "%BuildDir%"
 xcopy "$(SolutionDir)$(Platform)\$(Configuration)\*.exe" "%BuildDir%"
+xcopy "$(SolutionDir)$(Platform)\$(Configuration)\openvr_api.dll" "%BuildDir%"
 </Command>
     </PostBuildEvent>
     <BuildLog>

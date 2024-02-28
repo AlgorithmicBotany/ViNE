@@ -53,3 +53,7 @@ ViNE/x64
 ViNE/ViNE/x64
 ViNE/BUILD_PACKAGE/x64
 ViNE/BUILD_PACKAGE/BUILD_PACKAGE.log
+
+# do not ignore folders with 3d models in OBJ format (conflicts with compiled object files)
+!ViNE/ViNE/models/*.obj
+!ViNE/ViNE/untrackedmodels/*.obj

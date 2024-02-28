@@ -1,0 +1,8 @@
+# Blender v2.79 (sub 0) OBJ File: ''
+# www.blender.org
+o TrackpadFrame_Plane
+v 0.004764 0.012658 0.044757
+v 0.026709 0.014064 0.047668
+v 0.007997 0.003115 0.024995
+s off
+f 2 3 1

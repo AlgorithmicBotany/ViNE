@@ -35,7 +35,7 @@ Alternatively, check the first line of the CLR file to ensure it specifies the l
 
 3. Build ViNE
 	* Open `./ViNE/ViNE/ViNE.sln`, select Release x64, then Build Solution.
-	* Note
+	* If everything was successful, the ViNE software package can be found in `./ViNE/ViNE/BUILD_PACKAGE/x64/Release`.
 
 # IsoPoly
 
